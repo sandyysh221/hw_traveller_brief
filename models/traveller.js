@@ -1,30 +1,21 @@
-const Traveller = function(journeys) {
+const Traveller = function (journeys) {
   this.journeys = journeys;
 };
 
-Traveller.prototype.getJourneyStartLocations = function() {
-
+Traveller.prototype.getJourneyStartLocations = function () {
+  return this.journeys.map((journey) => {
+    return journey.startLocation;
+  });
 };
 
-Traveller.prototype.getJourneyEndLocations = function () {
+Traveller.prototype.getJourneyEndLocations = function () {};
 
-};
+Traveller.prototype.getJourneysByTransport = function (transport) {};
 
-Traveller.prototype.getJourneysByTransport = function (transport) {
+Traveller.prototype.getJourneysByMinDistance = function (minDistance) {};
 
-};
+Traveller.prototype.calculateTotalDistanceTravelled = function () {};
 
-Traveller.prototype.getJourneysByMinDistance = function (minDistance) {
-
-};
-
-Traveller.prototype.calculateTotalDistanceTravelled = function () {
-
-};
-
-Traveller.prototype.getUniqueModesOfTransport = function () {
-
-};
-
+Traveller.prototype.getUniqueModesOfTransport = function () {};
 
 module.exports = Traveller;
