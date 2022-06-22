@@ -26,7 +26,11 @@ Traveller.prototype.getJourneysByMinDistance = function (minDistance) {
   });
 };
 
-Traveller.prototype.calculateTotalDistanceTravelled = function () {};
+Traveller.prototype.calculateTotalDistanceTravelled = function () {
+  return this.journeys.reduce((totalDistance, journey) => {
+    return (totalDistance += journey.distance);
+  }, 0);
+};
 
 Traveller.prototype.getUniqueModesOfTransport = function () {};
 
